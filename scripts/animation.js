@@ -2,7 +2,6 @@ document.querySelectorAll(".accordion-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     const idx = this.getAttribute("data-accordion-btn");
 
-    // Close all panels, reset all btns/icons
     document.querySelectorAll(".accordion-panel").forEach((panel, i) => {
       const button = document.querySelector(`[data-accordion-btn="${i}"]`);
       const icon = document.querySelector(`[data-accordion-icon="${i}"]`);
