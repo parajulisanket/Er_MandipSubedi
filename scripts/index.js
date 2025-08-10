@@ -1,18 +1,34 @@
 // top
 const backToTopButton = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    backToTopButton.style.display = "block";
-  } else {
+const mq = window.matchMedia("(min-width: 768px)");
+
+function toggleBackToTop() {
+  if (!mq.matches) {
     backToTopButton.style.display = "none";
+    return;
   }
-});
+
+  backToTopButton.style.display = window.scrollY > 500 ? "block" : "none";
+}
+
+toggleBackToTop();
+window.addEventListener("scroll", toggleBackToTop);
+window.addEventListener("resize", toggleBackToTop);
+
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// scroll down
+const scrollDownButton = document.querySelector('a[href="#about"]');
+scrollDownButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  document.getElementById("about").scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+});
 // testimonial left and right
-
 const cards = Array.from(document.querySelectorAll(".testimonial-card"));
 let startIdx = 0;
 const visibleCount = 3;

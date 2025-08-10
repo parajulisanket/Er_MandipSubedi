@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/favico.png" type="image/png" />
+    <title>Er. Mandip Subedi | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      id="site-nav"
+      class="absolute top-0 left-0 w-full z-30 bg-transparent px-10 md:px-0 transform transition-all duration-500 ease-out"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center py-4 w-full"
+      >
+        <div id="/" class="font-bold text-2xl">
+          <h1 class="leading-tight">Er. Mandip <br />Subedi</h1>
+        </div>
+        <!-- Desktop Nav -->
+        <div class="hidden md:block">
+          <ul class="flex items-center gap-14">
+            <li>
+              <a href="/index.html" class="hover:text-[#2B3990] link-underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-[#2B3990] link-underline"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#leadership" class="hover:text-[#2B3990] link-underline"
+                >Leadership</a
+              >
+            </li>
+            <li>
+              <a href="#action" class="hover:text-[#2B3990] link-underline"
+                >Action</a
+              >
+            </li>
+            <li>
+              <a href="#publication" class="hover:text-[#2B3990] link-underline"
+                >Publication</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="p-2 bg-[#2B3990] text-white rounded-full transition hover:brightness-125"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Hamburger -->
+        <div class="md:hidden flex items-center">
+          <button
+            id="menu-toggle"
+            class="text-[#2B3990] text-2xl focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="fixed inset-0 bg-[#2B3990] hidden flex flex-col md:hidden z-50 px-6 pt-10"
+        >
+          <!-- Close button -->
+          <button
+            id="menu-close"
+            class="absolute top-5 right-6 text-white text-3xl"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <nav
+            class="flex flex-col items-center justify-center flex-1 space-y-8"
+          >
+            <a
+              href="#"
+              class="text-white text-xl font-medium hover:text-gray-200"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-white text-xl font-medium hover:text-gray-200"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-white text-xl font-medium hover:text-gray-200"
+              >Leadership</a
+            >
+            <a
+              href="#"
+              class="text-white text-xl font-medium hover:text-gray-200"
+              >Action</a
+            >
+            <a
+              href="#"
+              class="text-white text-xl font-medium hover:text-gray-200"
+              >Publication</a
+            >
+            <a
+              href="#"
+              class="cursor-pointer block text-white text-xl font-medium hover:text-gray-200 border border-white rounded-full px-8 py-3 mt-2"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </div>
+    </nav>
+
+    <!-- contact -->
+    <section id="contact" class="bg-[#F3F4F6] pt-28 md:pt-36 pb-16 px-4">
+      <div class="max-w-7xl mx-auto px-6 md:px-0">
+        <div class="grid gap-0 md:gap-32 items-start md:grid-cols-[40%_50%]">
+          <!-- LEFT -->
+          <div>
+            <h2 class="text-3xl md:text-4xl title mb-6">Get in touch</h2>
+
+            <p class="text-slate-600 mb-4 max-w-md">
+              If you have any suggestions or comments, please feel free to reach
+              out via the
+              <a
+                class="text-gray-800 hover:text-[#2B3990] cursor-pointer hover:underline"
+                >contact form</a
+              >.
+            </p>
+
+            <div class="flex items-center gap-3 text-slate-700 mb-6">
+              <i class="fa-regular fa-envelope text-xl text-[#2B3990]"></i>
+              <a
+                href="mailto:office@mandipsubedi.com"
+                class="hover:text-[#2B3990] hover:underline"
+                >office@mandipsubedi.com</a
+              >
+            </div>
+
+            <div class="flex items-center gap-4 mb-8 socials-rail">
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white shadow ring-1 ring-slate-200 text-[#1877F2]"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white shadow ring-1 ring-slate-200 text-[#1DA1F2]"
+                aria-label="Twitter/X"
+              >
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white shadow ring-1 ring-slate-200 text-[#E1306C]"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white shadow ring-1 ring-slate-200 text-[#FF0000]"
+                aria-label="YouTube"
+              >
+                <i class="fa-brands fa-youtube text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white shadow ring-1 ring-slate-200 text-black"
+                aria-label="TikTok"
+              >
+                <i class="fa-brands fa-tiktok text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- form -->
+          <div class="bg-white rounded-md shadow-md p-6 md:p-10 relative">
+            <form id="contact-form" class="relative">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                  <label class="block text-sm text-slate-500 mb-2"
+                    >Your name</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full name"
+                    class="block w-full font-light bg-transparent px-0 py-2 border-0 border-b border-slate-300 text-black placeholder-black placeholder-opacity-100 focus:outline-none focus:ring-0 focus:shadow-none focus:border-[#2B3990] focus:border-b-2"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm text-slate-500 mb-2"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    class="block w-full font-light bg-transparent px-0 py-2 border-0 border-b border-slate-300 text-black placeholder-black placeholder-opacity-100 focus:outline-none focus:ring-0 focus:shadow-none focus:border-[#2B3990] focus:border-b-2"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <div>
+                  <label class="block text-sm text-slate-500 mb-2"
+                    >Contact Number</label
+                  >
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number"
+                    class="block w-full font-light bg-transparent px-0 py-2 border-0 border-b border-slate-300 text-black placeholder-black placeholder-opacity-100 focus:outline-none focus:ring-0 focus:shadow-none focus:border-[#2B3990] focus:border-b-2"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm text-slate-500 mb-2"
+                    >Location</label
+                  >
+                  <input
+                    type="text"
+                    name="location"
+                    placeholder="District, if in Nepal or Country, if Abroad"
+                    class="block w-full font-light bg-transparent px-0 py-2 border-0 border-b border-slate-300 text-black placeholder-black placeholder-opacity-100 focus:outline-none focus:ring-0 focus:shadow-none focus:border-[#2B3990] focus:border-b-2"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <label class="block text-sm text-slate-500 mb-2"
+                  >Comments</label
+                >
+                <textarea
+                  name="comments"
+                  rows="5"
+                  placeholder="Please try limiting to 150 words"
+                  class="block w-full font-light bg-transparent px-0 py-2 border-0 border-b border-slate-300 text-black placeholder-black placeholder-opacity-100 focus:outline-none focus:ring-0 focus:shadow-none focus:border-[#2B3990] focus:border-b-2"
+                ></textarea>
+              </div>
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                class="w-full mt-8 bg-slate-900 text-white rounded-md py-4 font-semibold tracking-wide hover:bg-[#2B3990] transition"
+              >
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-white px-4 py-12">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between items-center gap-10 md:gap-0 mb-8"
+      >
+        <div
+          class="flex-1 flex md:justify-start justify-center items-center mb-6 md:mb-0"
+        >
+          <h1 class="text-2xl font-bold leading-tight">
+            Er. Mandip <br />Subedi
+          </h1>
+        </div>
+
+        <nav
+          class="flex-1 flex justify-center gap-6 text-lg mb-6 md:mb-0 font-light"
+        >
+          <a href="#" class="hover:text-blue-400">Home</a>
+          <a href="#" class="hover:text-blue-400">About</a>
+          <a href="#" class="hover:text-blue-400">Leadership</a>
+          <a href="#" class="hover:text-blue-400">Action</a>
+          <a href="#" class="hover:text-blue-400">Publication</a>
+        </nav>
+
+        <div class="flex-1 flex md:justify-end justify-center gap-6">
+          <a
+            href="https://www.facebook.com/subedimandip/reels/"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-square-facebook text-3xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mandip-subedi-phd-135a2ab0/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin text-3xl"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/mandip.subedi/"
+            target="_blank"
+            aria-label="instagram"
+          >
+            <i class="fa-brands fa-instagram text-3xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-10 py-8 mb-8"
+      >
+        <div class="flex-1 text-md font-light">
+          <p>
+            Whether you're a young engineer with questions,<br />a colleague
+            with ideas, or someone seeking for <br />collaboration — feel free
+            to reach out.
+          </p>
+        </div>
+
+        <div class="flex-1 flex flex-col md:items-end items-start gap-1">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-3xl"></i>
+            <a
+              href="mailto:mandip.subedi@gmail.com"
+              class="hover:text-blue-400 ml-1"
+              >mandip.subedi@gmail.com</a
+            >
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-phone-volume text-3xl"></i>
+            <a href="tel:+9779851124192" class="hover:text-blue-400 ml-1"
+              >+977-9851124192</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6 text-gray-400 text-base gap-3"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-3 text-gray-400 text-base"
+        >
+          <div>
+            © 2024 Er. Mandip Subedi | All rights reserved | Privacy Policy
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-center">
+          Developed by
+          <a href="#" class="hover:text-blue-400 underline"
+            ><img src="./assets/kit.png" alt="" class="w-28 h-8"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/menu.js"></script>
+  </body>
+</html>

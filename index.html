@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/favico.png" type="image/png" />
@@ -21,11 +21,14 @@
       <i class="fa-solid fa-angle-up"></i>
     </button>
     <!-- Navbar -->
-    <nav class="absolute top-0 left-0 w-full z-30 bg-transparent px-10 md:px-0">
+    <nav
+      id="site-nav"
+      class="absolute top-0 left-0 w-full z-30 bg-transparent px-10 md:px-0 transform transition-all duration-500 ease-out"
+    >
       <div
         class="max-w-7xl mx-auto flex justify-between items-center py-4 w-full"
       >
-        <div class="font-bold text-2xl">
+        <div id="/" class="font-bold text-2xl">
           <h1 class="leading-tight">Er. Mandip <br />Subedi</h1>
         </div>
         <!-- Desktop Nav -->
@@ -37,24 +40,28 @@
               >
             </li>
             <li>
-              <a href="#" class="hover:text-[#2B3990] link-underline">About</a>
+              <a href="#about" class="hover:text-[#2B3990] link-underline"
+                >About</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:text-[#2B3990] link-underline"
+              <a href="#leadership" class="hover:text-[#2B3990] link-underline"
                 >Leadership</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-[#2B3990] link-underline">Action</a>
+              <a href="#action" class="hover:text-[#2B3990] link-underline"
+                >Action</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:text-[#2B3990] link-underline"
+              <a href="#publication" class="hover:text-[#2B3990] link-underline"
                 >Publication</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="./contact.html"
                 class="p-2 bg-[#2B3990] text-white rounded-full transition hover:brightness-125"
                 >Contact</a
               >
@@ -111,8 +118,8 @@
               >Publication</a
             >
             <a
-              href="#"
-              class="block text-white text-xl font-medium hover:text-gray-200 border border-white rounded-full px-8 py-3 mt-2"
+              href="./contact.html"
+              class="cursor-pointer block text-white text-xl font-medium hover:text-gray-200 border border-white rounded-full px-8 py-3 mt-2"
               >Contact</a
             >
           </nav>
@@ -149,29 +156,40 @@
           <span class="mx-2 text-[#2B3990]">|</span> Institutional Leader
         </p>
       </div>
-      <!-- Right Image (edge-to-edge) -->
+      <!-- Right Image  -->
       <div class="hidden md:block relative h-screen w-1/2 z-10">
         <div class="absolute inset-y-0 right-0 w-full h-full">
           <img
-            src="./assets/hero-sec1.jpg"
+            src="./assets/hero-img.jpg"
             alt="Mandip Subedi"
             class="w-full h-full object-cover object-center"
           />
-          <!-- <div
+          <div
             class="absolute inset-0"
             style="
               background: linear-gradient(
                 to left,
-                rgba(255, 255, 255, 0) 70%,
+                rgba(255, 255, 255, 0) 90%,
                 #fff 100%
               );
             "
-          ></div> -->
+          ></div>
         </div>
+      </div>
+      <!-- scrol down  -->
+      <div
+        class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center z-20 hidden lg:block"
+      >
+        <a
+          href="#about"
+          class="text-gray-700 text-sm flex flex-col items-center hover:text-gray-500"
+        >
+          <i class="fa-solid fa-computer-mouse text-3xl sway-animation"></i>
+        </a>
       </div>
     </section>
     <!-- about  -->
-    <section class="max-w-7xl mx-auto py-12 px-4">
+    <section id="about" class="max-w-7xl mx-auto py-12 px-4">
       <h1 class="title uppercase text-center mb-2">About</h1>
       <h2 class="text-xl md:text-xl font-medium text-gray-800 text-center mb-6">
         A Lifelong Journey in Engineering and Service
@@ -207,7 +225,7 @@
       </blockquote>
     </section>
     <!-- leadership -->
-    <section class="max-w-7xl mx-auto py-12 px-4">
+    <section id="leadership" class="max-w-7xl mx-auto py-12 px-4">
       <h1 class="title uppercase text-center mb-2">Institutional Leadership</h1>
       <h2 class="text-xl font-medium text-gray-800 text-center mb-10">
         Strengthening Engineering from Within
@@ -309,22 +327,24 @@
       </div>
     </section>
     <hr class="mx-auto border-t border-gray-300 max-w-7xl my-8" />
-    <!-- action-->
-    <section class="max-w-7xl mx-auto py-12 px-4">
+    <!-- action -->
+    <section class="max-w-7xl mx-auto py-12 px-4" id="action">
       <h1 class="title uppercase text-center mb-2">Action</h1>
       <h2 class="text-xl font-medium text-gray-800 text-center mb-10">
         From the Field to Policy Tables
       </h2>
 
-      <!-- Accordion -->
       <div id="accordion" class="flex flex-col gap-10">
         <!-- 1 -->
         <div
           class="rounded-2xl shadow-lg overflow-hidden border-b-4 border-[#2B3990] border"
         >
           <button
-            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#2B3990] text-white transition focus:outline-none"
+            id="btn-0"
+            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition-colors duration-300 ease-out focus:outline-none"
             data-accordion-btn="0"
+            aria-expanded="false"
+            aria-controls="panel-0"
           >
             <div class="flex items-center gap-4">
               <span class="text-5xl font-semibold">01</span>
@@ -332,15 +352,19 @@
                 >Jajarkot Earthquake Reconnaissance</span
               >
             </div>
-            <span class="text-4xl font-bold transition" data-accordion-icon="0"
-              >-</span
-            >
+            <span class="text-4xl font-bold" data-accordion-icon="0">+</span>
           </button>
+
           <div
-            class="accordion-panel bg-[#2B3990] text-white border-t border-white/30 px-8 pb-6 pt-2 block"
+            id="panel-0"
+            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] overflow-hidden max-h-0 opacity-0 p-0 transition-[max-height,opacity,padding] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[max-height,opacity] transform-gpu"
             data-accordion-panel="0"
+            role="region"
+            aria-labelledby="btn-0"
           >
-            Technical insights that informed risk mapping and awareness.
+            <div class="accordion-inner">
+              Technical insights that informed risk mapping and awareness.
+            </div>
           </div>
         </div>
 
@@ -349,8 +373,11 @@
           class="rounded-2xl shadow-lg overflow-hidden border-b-4 border-[#2B3990] border"
         >
           <button
-            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition focus:outline-none"
+            id="btn-1"
+            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition-colors duration-300 ease-out focus:outline-none"
             data-accordion-btn="1"
+            aria-expanded="false"
+            aria-controls="panel-1"
           >
             <div class="flex items-center gap-4">
               <span class="text-5xl font-semibold">02</span>
@@ -358,16 +385,20 @@
                 >Melamchi Flood Study</span
               >
             </div>
-            <span class="text-4xl font-bold transition" data-accordion-icon="1"
-              >+</span
-            >
+            <span class="text-4xl font-bold" data-accordion-icon="1">+</span>
           </button>
+
           <div
-            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] px-8 pb-6 pt-2 hidden"
+            id="panel-1"
+            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] overflow-hidden max-h-0 opacity-0 p-0 transition-[max-height,opacity,padding] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[max-height,opacity] transform-gpu"
             data-accordion-panel="1"
+            role="region"
+            aria-labelledby="btn-1"
           >
-            A case where disaster science directly informed community
-            preparedness.
+            <div class="accordion-inner">
+              A case where disaster science directly informed community
+              preparedness.
+            </div>
           </div>
         </div>
 
@@ -376,8 +407,11 @@
           class="rounded-2xl shadow-lg overflow-hidden border-b-4 border-[#2B3990] border"
         >
           <button
-            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition focus:outline-none"
+            id="btn-2"
+            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition-colors duration-300 ease-out focus:outline-none"
             data-accordion-btn="2"
+            aria-expanded="false"
+            aria-controls="panel-2"
           >
             <div class="flex items-center gap-4">
               <span class="text-5xl font-semibold">03</span>
@@ -385,15 +419,19 @@
                 >Kathmandu Liquefaction Study</span
               >
             </div>
-            <span class="text-4xl font-bold transition" data-accordion-icon="2"
-              >+</span
-            >
+            <span class="text-4xl font-bold" data-accordion-icon="2">+</span>
           </button>
+
           <div
-            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] px-8 pb-6 pt-2 hidden"
+            id="panel-2"
+            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] overflow-hidden max-h-0 opacity-0 p-0 transition-[max-height,opacity,padding] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[max-height,opacity] transform-gpu"
             data-accordion-panel="2"
+            role="region"
+            aria-labelledby="btn-2"
           >
-            Data-backed recommendations for seismic safety.
+            <div class="accordion-inner">
+              Data-backed recommendations for seismic safety.
+            </div>
           </div>
         </div>
 
@@ -402,8 +440,11 @@
           class="rounded-2xl shadow-lg overflow-hidden border-b-4 border-[#2B3990] border"
         >
           <button
-            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition focus:outline-none"
+            id="btn-3"
+            class="accordion-btn w-full flex justify-between items-center px-8 py-6 bg-[#f4f4f6] text-black transition-colors duration-300 ease-out focus:outline-none"
             data-accordion-btn="3"
+            aria-expanded="false"
+            aria-controls="panel-3"
           >
             <div class="flex items-center gap-4">
               <span class="text-5xl font-semibold">04</span>
@@ -411,21 +452,25 @@
                 >Bridge Design & Risk Mitigation</span
               >
             </div>
-            <span class="text-4xl font-bold transition" data-accordion-icon="3"
-              >+</span
-            >
+            <span class="text-4xl font-bold" data-accordion-icon="3">+</span>
           </button>
+
           <div
-            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] px-8 pb-6 pt-2 hidden"
+            id="panel-3"
+            class="accordion-panel bg-[#f4f4f6] text-gray-700 border-t border-[#e5e7eb] overflow-hidden max-h-0 opacity-0 p-0 transition-[max-height,opacity,padding] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[max-height,opacity] transform-gpu"
             data-accordion-panel="3"
+            role="region"
+            aria-labelledby="btn-3"
           >
-            Dozens of bridges across Nepal designed with resilience in mind.
+            <div class="accordion-inner">
+              Dozens of bridges across Nepal designed with resilience in mind.
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- publlication -->
-    <section class="max-w-7xl mx-auto py-12 px-4">
+    <section id="publication" class="max-w-7xl mx-auto py-12 px-4">
       <h1 class="title uppercase text-center mb-2">Publication</h1>
       <h2 class="text-xl font-medium text-gray-800 text-center mb-10">
         Research is powerful when it shapes practice
@@ -433,11 +478,12 @@
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <!-- Card 1: Paper -->
         <div
-          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4] transition-transform duration-200 hover:scale-y-110"
+          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4]"
         >
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-spinner text-2xl text-[#2B3990]"></i>
-            <span class="text-lg font-medium text-[#2B3990]">Springer</span>
+            <span class="text-lg font-medium text-[#2B3990] tracking-wide"
+              >Springer</span
+            >
           </div>
           <div class="font-semibold text-lg mb-1 text-[#232946] tracking-wider">
             Geotechnical Response During the 2015 Gorkha Earthquake
@@ -449,7 +495,7 @@
           <a
             href="./assets/paper1.pdf"
             download
-            class="inline-flex items-center justify-center gap-2 bg-gray-800 text-white font-medium px-5 py-2 hover:bg-[#2B3990] transition shadow"
+            class="inline-flex items-center justify-center gap-2 bg-gray-800 text-white font-medium px-5 py-2"
           >
             <i class="fa-solid fa-plus"></i>
             Download Report
@@ -457,11 +503,12 @@
         </div>
         <!-- Card 2: Nature -->
         <div
-          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4] transition-transform duration-200 hover:scale-y-110"
+          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4]"
         >
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-leaf text-2xl text-[#2B3990]"></i>
-            <span class="text-lg font-medium text-[#2B3990]">Nature</span>
+            <span class="text-lg font-medium text-[#2B3990] tracking-wide"
+              >Nature</span
+            >
           </div>
           <div class="font-semibold text-lg mb-1 text-[#232946] tracking-wider">
             Liquefaction Susceptibility of Kathmandu Basin
@@ -481,11 +528,10 @@
         </div>
         <!-- Card 3: Reconnaissance Report -->
         <div
-          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4] transition-transform duration-200 hover:scale-y-110"
+          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4]"
         >
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-star text-2xl text-[#2B3990]"></i>
-            <span class="text-lg font-medium text-[#2B3990]"
+            <span class="text-lg font-medium text-[#2B3990] tracking-wide"
               >Reconnaissance</span
             >
           </div>
@@ -507,16 +553,15 @@
         </div>
         <!-- Card 4: Gorkha -->
         <div
-          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4] transition-transform duration-200 hover:scale-y-110"
+          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4]"
         >
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-star-of-life text-2xl text-[#2B3990]"></i>
-            <span class="text-lg font-medium text-[#2B3990]"
+            <span class="text-lg font-medium text-[#2B3990] tracking-wide"
               >Reconnaissance</span
             >
           </div>
           <div class="font-semibold text-lg mb-1 text-[#232946] tracking-wider">
-            Gorkha Earthquake Reconnaissance
+            Gorkha Earthquake Reconnaissance Act
           </div>
           <div class="text-sm text-gray-600 mb-4">
             Key findings from field investigation after Nepal’s largest modern
@@ -533,11 +578,10 @@
         </div>
         <!-- Card 5: NBC & DRR Policy -->
         <div
-          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4] transition-transform duration-200 hover:scale-y-110"
+          class="flex flex-col bg-white rounded-xl shadow-md p-6 border border-[#E5EAF4]"
         >
           <div class="flex items-center gap-3 mb-4">
-            <i class="fa-solid fa-lock text-2xl text-[#2B3990]"></i>
-            <span class="text-lg font-medium text-[#2B3990]"
+            <span class="text-lg font-medium text-[#2B3990] tracking-wide"
               >Policy & Code</span
             >
           </div>
@@ -617,7 +661,7 @@
             class="testimonial-card flex flex-col items-center bg-[#f7faff] rounded-xl shadow-sm px-8 py-10 w-full max-w-md text-center"
           >
             <img
-              src="./susmagurung.jpg"
+              src="./assets/dummy1.png"
               alt=""
               class="w-24 h-24 rounded-full object-cover shadow mb-6"
             />
@@ -639,7 +683,7 @@
             class="testimonial-card flex flex-col items-center bg-[#f7faff] rounded-xl shadow-sm px-8 py-10 w-full max-w-md text-center"
           >
             <img
-              src="./nirajkarki.jpeg"
+              src="./assets/dummy2.webp"
               alt=""
               class="w-24 h-24 rounded-full object-cover shadow mb-6"
             />
@@ -663,7 +707,7 @@
             class="testimonial-card flex flex-col items-center bg-[#f7faff] rounded-xl shadow-sm px-8 py-10 w-full max-w-md text-center"
           >
             <img
-              src="./rameshthapa.webp"
+              src="./assets/dummy3.jpg"
               alt=""
               class="w-24 h-24 rounded-full object-cover shadow mb-6"
             />
@@ -687,7 +731,7 @@
             class="testimonial-card flex flex-col items-center bg-[#f7faff] rounded-xl shadow-sm px-8 py-10 w-full max-w-md text-center"
           >
             <img
-              src="./rameshthapa.webp"
+              src="./assets/dummy4.avif"
               alt=""
               class="w-24 h-24 rounded-full object-cover shadow mb-6"
             />
@@ -717,7 +761,7 @@
       </div>
     </section>
     <!-- image part -->
-    <section class="overflow-hidden py-12">
+    <section class="overflow-hidden pt-12">
       <div class="expanding-gallery">
         <div class="gallery-img">
           <img src="./assets/img1.jpg" alt="Gallery 1" />
@@ -753,7 +797,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="bg-black text-white rounded-t-[60px] px-4 py-12">
+    <footer class="bg-black text-white px-4 py-12">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between items-center gap-10 md:gap-0 mb-8"
       >
@@ -791,11 +835,11 @@
             <i class="fa-brands fa-linkedin text-3xl"></i>
           </a>
           <a
-            href="https://scholar.google.com/"
+            href="https://www.instagram.com/mandip.subedi/"
             target="_blank"
-            aria-label="Scholar"
+            aria-label="instagram"
           >
-            <i class="fa-brands fa-google-scholar text-white"></i>
+            <i class="fa-brands fa-instagram text-3xl"></i>
           </a>
         </div>
       </div>
@@ -854,5 +898,6 @@
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/animation.js"></script>
     <script src="./scripts/youtube.js"></script>
+    <script src="./scripts/nav.js"></script>
   </body>
 </html>
