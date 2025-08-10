@@ -12,16 +12,16 @@
   animation: fadeInUp 0.9s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 .fade-in-up.delay-1 {
-  animation-delay: 0.15s;
+  animation-delay: 0.3s;
 }
 .fade-in-up.delay-2 {
-  animation-delay: 0.3s;
+  animation-delay: 2.7s;
 }
 .fade-in-up.delay-3 {
   animation-delay: 0.45s;
 }
 .fade-in-up.delay-4 {
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 
 .typing {
@@ -69,7 +69,7 @@
   text-transform: uppercase;
 }
 
-/* image css */
+/* image css in index */
 .expanding-gallery {
   display: flex;
   width: 100vw;
@@ -140,29 +140,29 @@
 /* contact icon animation */
 .socials-rail a {
   opacity: 0;
-  transform: translateX(-28px) translateY(0);
+  transform: translateX(-30px) translateY(0);
   filter: blur(4px);
   animation: snake-in 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .socials-rail a:nth-child(1) {
-  animation-delay: 0ms;
+  animation-delay: 0.3s;
   --snake-y: -6px;
 }
 .socials-rail a:nth-child(2) {
-  animation-delay: 90ms;
+  animation-delay: 0.6s;
   --snake-y: 6px;
 }
 .socials-rail a:nth-child(3) {
-  animation-delay: 180ms;
+  animation-delay: 0.9s;
   --snake-y: -6px;
 }
 .socials-rail a:nth-child(4) {
-  animation-delay: 270ms;
+  animation-delay: 1.3s;
   --snake-y: 6px;
 }
 .socials-rail a:nth-child(5) {
-  animation-delay: 360ms;
+  animation-delay: 1.5s;
   --snake-y: -6px;
 }
 
