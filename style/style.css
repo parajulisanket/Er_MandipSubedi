@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap");
+
+.sub-heading {
+  font-family: "Libre Franklin", sans-serif;
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -24,6 +30,25 @@
   animation-delay: 0.8s;
 }
 
+/* fade down */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-down {
+  animation: fadeDown 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+.fade-down.delay-1 {
+  animation-delay: 0.5s;
+}
+
+/* hero typing part */
 .typing {
   overflow: hidden;
   border-right: 0.1em solid #ffffff;
@@ -62,6 +87,7 @@
 
 /* title  */
 .title {
+  font-family: "Marcellus", sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
   color: #2b3990;
@@ -77,8 +103,8 @@
   overflow: hidden;
 }
 .expanding-gallery .gallery-img {
-  flex: 1 1 0;
-  transition: flex 0.9s cubic-bezier(0.4, 2, 0.6, 1), filter 0.5s;
+  flex: 1 2 0;
+  transition: flex 0.9s cubic-bezier(0.5, 1, 0.5, 1), filter 0.5s;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -86,9 +112,9 @@
 }
 .expanding-gallery .gallery-img:hover,
 .expanding-gallery .gallery-img:focus-within {
-  flex: 6 1 0;
+  flex: 5 0 0;
   z-index: 2;
-  filter: brightness(1.06);
+  filter: brightness(1.02);
 }
 .expanding-gallery .gallery-img img {
   width: 100%;
@@ -96,9 +122,10 @@
   object-fit: cover;
   pointer-events: none;
   user-select: none;
-  transition: filter 0.3s;
+  transition: filter 0.5s;
 }
 
+/* link underline */
 .link-underline {
   position: relative;
   display: inline-block;

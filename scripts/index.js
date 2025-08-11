@@ -19,15 +19,6 @@ backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// scroll down
-const scrollDownButton = document.querySelector('a[href="#about"]');
-scrollDownButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  document.getElementById("about").scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-});
 // testimonial left and right
 const cards = Array.from(document.querySelectorAll(".testimonial-card"));
 let startIdx = 0;
